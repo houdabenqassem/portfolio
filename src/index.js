@@ -9,5 +9,12 @@ body{
   padding:0;
   font-family: 'Roboto', sans-serif;
 }
+html{
+
+  background: url(http://i.imgur.com/WYltFm2.jpg);
+  background-size: cover;
+}
 `;
+
+
 ReactDOM.render(<App />, document.getElementById('root'));

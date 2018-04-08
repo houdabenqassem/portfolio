@@ -11,7 +11,7 @@ body{
 }
 html{
 
-  background: url(http://i.imgur.com/WYltFm2.jpg);
+  background: url(https://s3.amazonaws.com/devhouda/images/v2.gif);
   background-size: cover;
 }
 `;

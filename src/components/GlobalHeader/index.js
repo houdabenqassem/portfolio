@@ -58,7 +58,7 @@ const StyledImage= styled(ProfilePicture)`
 
 
 
-const GlobalHeader=(linkedin, ...props)=>{
+const GlobalHeader=(...props)=>{
  return(
    <div>
    <Heading>
@@ -72,7 +72,7 @@ const GlobalHeader=(linkedin, ...props)=>{
    </Anchor>
 
    <Heading>
-     {'Slack'}
+     {'Email'}
    </Heading>
    <Anchor href="https://www.instagram.com/houdette/">
      {'Instagram'}

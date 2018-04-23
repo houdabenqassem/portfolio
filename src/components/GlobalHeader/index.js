@@ -1,59 +1,101 @@
 import React from 'react';
 import ProfilePicture from '../ProfilePicture';
 import styled from 'styled-components';
+import media from '../../styles/media';
 
-const Container= styled.div`
+const LogoContainer = styled.div`
+display:block;
+width: 180px;
+margin: -20px auto;
+height: 335px;
+//display: block;
 
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+}
+
+
+`;
+const SVG = styled.svg`
+    fill: none;
+    stroke: #c5ff00;
+    stroke-miterlimit: 10;
+    stroke-width: 7px;
+    z-index: 9;
+}
+
+> polyline{
+stroke-dashoffset: 0; stroke-dasharray: none;}
+`;
+
+
+const Email = styled.h1`
+
+    top: auto;
+    left: auto;
+    bottom: 50%;
+    right: 50%;
+    text-align: center;
+    transform: translate(45%, 145%) rotate(-90deg);
+    transform-origin: center;
+    transition: all .07s ease;
+    visibility: visible;
+    letter-spacing: 1rem;
+    &&:hover{
+
+      width: 100%;
+      letter-spacing: 1.2em;
+    }
+
 
 
 `;
 
+const Linkedin = styled.h1`
 
-const Heading = styled.h1`
-  flex: 1;
-  border: .4rem;
-  border-radius: .5rem;
-  margin: 1rem;
-  font-size: 1.5rem;
-  padding: 1rem .5rem;
-  transition: all .07s ease;
-  text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.2);
-  text-shadow: 0 0 .5rem black;
-
-
-`;
-
-const Anchor = styled.a`
-flex: 1;
-border: .4rem;
-border-radius: .5rem;
-margin: 1rem;
 font-size: 1.5rem;
-padding: 1rem .5rem;
 transition: all .07s ease;
 text-align: center;
-color: white;
-background: rgba(0,0,0,0.2);
-text-shadow: 0 0 .5rem black;
+color: black;
 text-decoration: none;
+transform-origin: center;
+letter-spacing: 1rem;
+display: block;
+top: 0;
+cursor: pointer;
+z-index: 100;
+&&:hover{
+
+  width: 100%;
+  letter-spacing: 1.5em;
+
+}
+`;
+const Instagram = styled.h1`
+
+    top: auto;
+    right: auto;
+    bottom: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-45%, 160%) rotate(90deg);
+    transform-origin: center;
+    transition: all .07s ease;
+    visibility: visible;
+    letter-spacing: 0.8rem;
+    &&:hover{
+
+      width: 100%;
+      letter-spacing: 0.7em;
+    }
+
+
+
 `;
 
-
 const StyledImage= styled(ProfilePicture)`
-  height: 100px;
-  border: 5px ;
-  padding: 5px;
+
+  //padding: 5px;
   background: rgba(0,0,0,0.2);
-  border-radius: .5rem;
-  flex-wrap: wrap;
+  //opacity: 0.5;
 `;
 
 
@@ -61,24 +103,33 @@ const StyledImage= styled(ProfilePicture)`
 const GlobalHeader=(...props)=>{
  return(
    <div>
-   <Heading>
-     {'React-Portfolio: under Construction'}
-   </Heading>
-   <Container {...props}>
-   <StyledImage />
 
-   <Anchor href='https://www.linkedin.com/in/houda-benqassem-m-s-577a19a2/'>
+
+ {/*<StyledImage />*/}
+
+   <Linkedin>
      {'LinkedIn'}
-   </Anchor>
+   </Linkedin>
 
-   <Heading>
-     {'Email'}
-   </Heading>
+{/*
    <Anchor href="https://www.instagram.com/houdette/">
      {'Instagram'}
    </Anchor>
+*/}
 
-</Container>
+<Email>
+  {'Email'}
+</Email>
+<Instagram>
+  {'Instagram'}
+</Instagram>
+<LogoContainer>
+<StyledImage/>
+<SVG  xmlns={'http://www.w3.org/2000/svg'} viewBox={'0 0 187.61 291.01'}>
+ <polyline points={'58.29 2.34 5.4 61.22 181.08 169.72 5.08 284.54 5.08 170.54'}></polyline></SVG>
+
+
+</LogoContainer>
 </div>
 
  );

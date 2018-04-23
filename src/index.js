@@ -11,7 +11,7 @@ body{
 }
 html{
 
-  background: url(https://s3.amazonaws.com/devhouda/images/v2.gif);
+  //background: url(https://s3.amazonaws.com/devhouda/images/v2.gif);
   background-size: cover;
 }
 `;
